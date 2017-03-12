@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #FFF;
+}
+body,td,th {
+	font-size: 12px;
+	color: #000;
+}
+.daohang {
+	font-size: 16px;
+	font-style: normal;
+	color: #FFF;
+	text-align: center;
+	font-weight: bold;
+}
+.biaoti {
+	font-size: 15px;
+	color: #006;
+	font-weight: bold;
+}
+.biaotiyou {
+	font-size: 15px;
+	color: #006;
+	font-weight: bold;
+}
+.duanluo {
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: 200;
+}
+.dj{
+    width: 30px;
+    height: 50px;
+    background-color: #039;
+    display:none;
+	position:relative;
+	}
+
