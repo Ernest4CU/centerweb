@@ -71,6 +71,22 @@ body, td, th {
 	color: #000;
 	text-indent: 10px;
 }
+.devicedisplay div {
+	float: left;
+	width: 90px;
+	height: 222;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+.devicediv{
+	overflow:hidden;
+	height:160px;
+	width:730px;}
+.device_ul li{
+	float:left;
+	list-style-type:none;}
+.device_ul li img{
+	margin-right:10px;}
 </style>
 <script src="SpryAssets/SpryEffects.js" type="text/javascript"></script>
 <script src="js/myfocus-2.0.1.min.js" type="text/javascript"></script>
@@ -108,7 +124,7 @@ myFocus.set({
         <tr>
           <td height="40" background="images/导航栏.gif"><table width="1024" height="40" border="1" align="center">
               <tr align="center">
-                <td width="130" valign="middle"><a href="#" class="daohang">首页</a></td>
+                <td width="130" valign="middle"><a href="./index.html" class="daohang">首页</a></td>
                 <td width="131" valign="middle"><a href="#" class="daohang">中心概况</a></td>
                 <td width="128" valign="middle"><a href="#" class="daohang">新闻动态</a></td>
                 <td width="129" valign="middle"><a href="#" class="daohang">科研成果</a></td>
@@ -341,7 +357,20 @@ myFocus.set({
                   </table></td>
               </tr>
               <tr>
-                <td height="222" colspan="2" bgcolor="#FFFFFF">&nbsp;</td>
+                <td height="222" colspan="2" bgcolor="#FFFFFF"><div class="devicediv" id="deviceBox">
+                    <ul class="device_ul" id="devicepic1">
+                      <li><img src="images/bmp/0.bmp" /></li>
+                      <li><img src="images/bmp/1.bmp" /></li>
+                      <li><img src="images/bmp/2.bmp" /></li>
+                      <li><img src="images/bmp/3.bmp" /></li>
+                      <li><img src="images/bmp/4.bmp" /></li>
+                      <li><img src="images/bmp/5.bmp" /></li>
+                      <li><img src="images/bmp/6.bmp" /></li>
+                      <li><img src="images/bmp/7.bmp" /></li>
+                      <li><img src="images/bmp/8.bmp" /></li>
+                      <li><img src="images/bmp/9.bmp" /></li>
+                    </ul>
+                  </div></td>
               </tr>
             </table></td>
         </tr>
