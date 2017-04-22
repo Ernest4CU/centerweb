@@ -20,11 +20,16 @@ body, td, th {
 	color: #000;
 }
 .daohang {
+	display: block;
 	font-size: 16px;
 	font-style: normal;
 	color: #FFF;
 	text-align: center;
 	font-weight: bold;
+	text-decoration: none;
+}
+.daohang:hover {
+	color: #03F;
 }
 .biaoti {
 	font-size: 15px;
@@ -53,318 +58,314 @@ body, td, th {
 	height: 260px;
 	overflow: hidden;
 }
-a {
-	color: #333;
-	text-decoration: none
+.more {
+	color: #000;
 }
-ul {
-	list-style: none;
-}
-.nav {
-
-}
-.nav li {
-	float: left;
-	position: relative;
-
-}
-.nav li a {
-	display: block;
+.lingyu li {
+	list-style-type: none;
 	height: 30px;
-	text-align: center;
-	line-height: 30px;
-	width: 120px;
-	margin-left: 1px;
 }
-.subNav {
-	position: absolute;
-	top: 30px;
-	left: 0;
-	width: 120px;
-	height: 0;
-	overflow: hidden
-}
-.subNav li a {
-	background: #ddd
-}
-.subNav li a:hover {
-	background: #efefef
-}
-table {
-	margin:  10px auto;
-	border-collapse:  collapse;
-	color: white;
-	font-size:  20px;
-}
-td {
+.lingyu li a {
+	display: block;
+	text-decoration: none;
+	color: #000;
+	text-indent: 10px;
 }
 </style>
+<script src="SpryAssets/SpryEffects.js" type="text/javascript"></script>
 <script src="js/myfocus-2.0.1.min.js" type="text/javascript"></script>
+<script src="js/mf-pattern/mF_51xflash.js" type="text/javascript"></script>
 <script type="text/javascript">
-/*myFocus.set({id:'picbox'})*/
-</script>
-
-<script>
-window.onload=function(){
-    var aLi=document.getElementsByTagName('li');
-    for(var i=0; i<aLi.length; i++){
-	   aLi[i].onmouseover=function(){
-            var oSubNav=this.getElementsByTagName('ul')[0];
-            if(oSubNav){
-            var This=oSubNav;
-            clearInterval(This.time);
-            This.time=setInterval(function(){
-                    This.style.height=This.offsetHeight+16+"px";
-                    if(This.offsetHeight>=120)
-                    clearInterval(This.time);
-                },30)
-             }
-          }
-        //鼠标离开菜单，二级菜单动画收缩起来。		
-	 aLi[i].onmouseout=function(){
-            var oSubNav=this.getElementsByTagName('ul')[0];
-            if(oSubNav){
-            var This=oSubNav;
-            clearInterval(This.time);
-            This.time=setInterval(function(){
-                    This.style.height=This.offsetHeight-16+"px";
-                    if(This.offsetHeight<=0)
-                    clearInterval(This.time);
-                },30)
-             }
-          }
-		
-	}
+function MM_effectHighlight(targetElement, duration, startColor, endColor, restoreColor, toggle)
+{
+	Spry.Effect.DoHighlight(targetElement, {duration: duration, from: startColor, to: endColor, restoreColor: restoreColor, toggle: toggle});
 }
+window.onload = function (){
+    var xod1=document.getElementById("as");
+        xod1.onmouseover= function (){
+            var xoda2=document.getElementById("dgil");
+                xoda2.style.display='block';
+        }
+		xod1.onmouseout= function (){
+            var xoda2=document.getElementById("dgil");
+                xoda2.style.display='none';
+        }
+}
+myFocus.set({
+	id:'picbox'})
 </script>
 </head>
 
 <body>
 <table width="100%" border="0">
-<tr>
-<td bgcolor="#1486C4">
-<table width="1024" border="0" align="center" cellpadding="0" cellspacing="0">
   <tr>
-    <td><img src="images/标题图片1+字.gif" width="1024" height="128" /></td>
+    <td bgcolor="#1486C4"><table width="1024" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><img src="images/标题图片1+字.gif" width="1024" height="128" /></td>
+        </tr>
+      </table>
+      <table width="1024" border="0" align="center" cellpadding="0" cellspacing="0" >
+        <tr>
+          <td height="40" background="images/导航栏.gif"><table width="1024" height="40" border="1" align="center">
+              <tr align="center">
+                <td width="130" valign="middle"><a href="#" class="daohang">首页</a></td>
+                <td width="131" valign="middle"><a href="#" class="daohang">中心概况</a></td>
+                <td width="128" valign="middle"><a href="#" class="daohang">新闻动态</a></td>
+                <td width="129" valign="middle"><a href="#" class="daohang">科研成果</a></td>
+                <td width="134" valign="middle"><a href="#" class="daohang">合作单位</a></td>
+                <td width="107" valign="middle"><a href="#" class="daohang">仪器设备</a></td>
+                <td width="123" valign="middle"><a href="#" class="daohang">下载专区</a></td>
+                <td width="108" valign="middle"><a href="#" class="daohang">联系我们</a></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+      <table width="1024" height="260" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><div class="ad" id="picbox">
+              <div class="pic">
+                <ul>
+                  <li><img src="images/a002-梅江二期.gif"/></li>
+                  <li><img src="images/未标题-1.gif"/></li>
+                  <li><img src="images/城建.gif"/></li>
+                  <!--img src="images/a002-梅江二期.gif" width="1024" height="260" /-->
+                </ul>
+              </div>
+            </div></td>
+        </tr>
+      </table>
+      <table width="1024" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="254" height="775"><table width="254" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="254" height="40" align="center" valign="middle" background="images/标题.gif" bgcolor="#FFFFFF" class="biaoti"> 研究领域</td>
+              </tr>
+              <tr>
+                <td height="195" valign="middle" bgcolor="#FFFFFF"><ul class="lingyu">
+                    <li><a href="#">研究领域1</a></li>
+                    <li><a href="#">研究领域2</a></li>
+                    <li><a href="#">研究领域3</a></li>
+                    <li><a href="#">研究领域4</a></li>
+                    <li><a href="#">研究领域5</a></li>
+                    <li><a href="#">研究领域6</a></li>
+                  </ul></td>
+              </tr>
+              <tr>
+                <td height="40" align="center" valign="middle" background="images/标题.gif" bgcolor="#FFFFFF" class="biaoti">合作单位</td>
+              </tr>
+              <tr>
+                <td height="234" valign="middle" bgcolor="#FFFFFF"><ul class="lingyu">
+                    <li><a href="#">单位1</a></li>
+                    <li><a href="#">单位2</a></li>
+                    <li><a href="#">单位3</a></li>
+                    <li><a href="#">单位4</a></li>
+                    <li><a href="#">单位5</a></li>
+                    <li><a href="#">单位6</a></li>
+                  </ul></td>
+              </tr>
+              <tr>
+                <td height="41" align="center" valign="middle" background="images/标题.gif" bgcolor="#FFFFFF" class="biaoti">联系我们</td>
+              </tr>
+              <tr>
+                <td height="222" valign="middle" bgcolor="#FFFFFF"><ul class="lingyu">
+                    <li><a>电话：000-00000000</a></li>
+                    <li><a>地址：天津市</a></li>
+                    <li><a>邮编：300000</a></li>
+                    <li><a>网址：http://www.tjuci.edu.cn/</a></li>
+                  </ul></td>
+              </tr>
+            </table></td>
+          <td width="768" align="left"><table width="768" border="0" align="right" cellpadding="0" cellspacing="0">
+              <tr>
+                <td height="40" colspan="2" background="images/标题-1.gif" bgcolor="#FFFFFF" class="biaotiyou"><table width="730" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td width="177" class="biaotiyou">中心简介</td>
+                      <td width="197" align="right">&nbsp;</td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td width="279" height="195" align="center" valign="middle" bgcolor="#FFFFFF"><img src="images/工程中心.gif" width="237" height="157" /></td>
+                <td width="490" align="left" valign="middle" bgcolor="#FFFFFF" 20><br />
+                  <table width="464" border="0">
+                    <tr>
+                      <td><p>天津市建筑智能化系统集成与检测技术工程中心于2015年组建, 坐落于天津市西青区, 现<br />
+                          <br />
+                          有科技活动人员总数 72 人, 仪器设备118台(套), 程中心托单位为天津城建大学, 可为中小<br />
+                          <br />
+                          企业提供专业服务内容有, 制定建筑智能化系统集成技术规范与导则, 为系统集成工程提<br />
+                          <br />
+                          供技术咨询和技术服务, 国外先进技术消化吸收与再创新,人才的培养, 开发新技术和新产<br />
+                          <br />
+                          品并进一步推广应用等技术咨询与服务。 </p></td>
+                    </tr>
+                  </table>
+                  <p class="duanluo">&nbsp;</p></td>
+              </tr>
+              <tr>
+                <td height="275" colspan="2" bgcolor="#1486C4"><table width="383" border="0" align="left" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td width="384" height="40" background="images/标题-2.gif" bgcolor="#FFFFFF" class="biaotiyou"><table width="350" border="0" align="center" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td class="biaotiyou">新闻动态</td>
+                            <td align="right">more&gt;&gt;</td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                    <tr>
+                      <td height="234" bgcolor="#FFFFFF"><table width="384" height="234">
+                          <tbody>
+                            <tr>
+                              <td align="center" valign="middle" width="8" nowrap=""><span class="leaderfont38617"><img src="images/bott.jpg" align="absmiddle" border="0"></span></td>
+                              <td width="384" align="left" valign="middle"><a href="info/1003/3340.htm" class="c38617" title="学校召开牢固树立“四个意识”主题宣讲报告会" target="_blank"> 学校召开牢固树立“四个意识”主题宣讲报告会 </a></td>
+                              <td valign="middle" align="right" class="timestyle38617" width="-2" nowrap=""></td>
+                            </tr>
+                            <tr>
+                              <td colspan="4" height="2" style="background-image:url(images/22.gif)"></td>
+                            </tr>
+                            <tr>
+                              <td align="center" valign="middle" width="8" nowrap=""><span class="leaderfont38617"><img src="images/bott.jpg" align="absmiddle" border="0"></span></td>
+                              <td valign="middle" align="left"><a href="info/1003/3339.htm" class="c38617" title="我校被评为2016年度天津市平安高校安全管理标准化建设优秀单位" target="_blank"> 我校被评为2016年度天津市平安高校安全管理标准化建设优秀单位 </a></td>
+                              <td valign="middle" align="right" class="timestyle38617" width="-2" nowrap=""></td>
+                            </tr>
+                            <tr>
+                              <td colspan="4" height="2" style="background-image:url(images/22.gif)"></td>
+                            </tr>
+                            <tr>
+                              <td align="center" valign="middle" width="8" nowrap=""><span class="leaderfont38617"><img src="images/bott.jpg" align="absmiddle" border="0"></span></td>
+                              <td valign="middle" align="left"><a href="info/1003/3338.htm" class="c38617" title="迎接全运会 健康新城建——我校第二届体育节开幕" target="_blank"> 迎接全运会 健康新城建——我校第二届体育节开幕 </a></td>
+                              <td valign="middle" align="right" class="timestyle38617" width="-2" nowrap=""></td>
+                            </tr>
+                            <tr>
+                              <td colspan="4" height="2" style="background-image:url(images/22.gif)"></td>
+                            </tr>
+                            <tr>
+                              <td align="center" valign="middle" width="8" nowrap=""><span class="leaderfont38617"><img src="images/bott.jpg" align="absmiddle" border="0"></span></td>
+                              <td valign="middle" align="left"><a href="info/1003/3336.htm" class="c38617" title="新西兰梅西大学代表团一行来我校访问" target="_blank"> 新西兰梅西大学代表团一行来我校访问 </a></td>
+                              <td valign="middle" align="right" class="timestyle38617" width="-2" nowrap=""></td>
+                            </tr>
+                            <tr>
+                              <td colspan="4" height="2" style="background-image:url(images/22.gif)"></td>
+                            </tr>
+                            <tr>
+                              <td align="center" valign="middle" width="8" nowrap=""><span class="leaderfont38617"><img src="images/bott.jpg" align="absmiddle" border="0"></span></td>
+                              <td valign="middle" align="left"><a href="info/1003/3335.htm" class="c38617" title="“喜迎全运盛会 尽展校园风采”——我校第十二届学生社团文化节开幕" target="_blank"> “喜迎全运盛会 尽展校园风采”——我校第十二届学生社团文化节开幕 </a></td>
+                              <td valign="middle" align="right" class="timestyle38617" width="-2" nowrap=""></td>
+                            </tr>
+                            <tr>
+                              <td colspan="4" height="2" style="background-image:url(images/22.gif)"></td>
+                            </tr>
+                            <tr>
+                              <td align="center" valign="middle" width="8" nowrap=""><span class="leaderfont38617"><img src="images/bott.jpg" align="absmiddle" border="0"></span></td>
+                              <td valign="middle" align="left"><a href="info/1003/3329.htm" class="c38617" title="我校召开全国两会精神宣讲报告会" target="_blank"> 我校召开全国两会精神宣讲报告会 </a></td>
+                              <td valign="middle" align="right" class="timestyle38617" width="-2" nowrap=""></td>
+                            </tr>
+                            <tr>
+                              <td colspan="4" height="2" style="background-image:url(images/22.gif)"></td>
+                            </tr>
+                          </tbody>
+                        </table></td>
+                    </tr>
+                  </table>
+                  <table width="383" border="0" align="right" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td height="40" background="images/标题-2.gif" bgcolor="#FFFFFF" class="biaotiyou"><table width="350" border="0" align="center" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td class="biaotiyou">科研成果</td>
+                            <td align="right">more&gt;&gt;</td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                    <tr>
+                      <td height="234" bgcolor="#FFFFFF"><table width="383" height="234">
+                          <tbody>
+                            <tr>
+                              <td align="center" valign="middle" width="8" nowrap=""><span class="leaderfont38617"><img src="images/bott.jpg" align="absmiddle" border="0"></span></td>
+                              <td width="384" align="left" valign="middle"><a href="info/1003/3340.htm" class="c38617" title="学校召开牢固树立“四个意识”主题宣讲报告会" target="_blank"> 学校召开牢固树立“四个意识”主题宣讲报告会 </a></td>
+                              <td valign="middle" align="right" class="timestyle38617" width="-2" nowrap=""></td>
+                            </tr>
+                            <tr>
+                              <td colspan="4" height="2" style="background-image:url(images/22.gif)"></td>
+                            </tr>
+                            <tr>
+                              <td align="center" valign="middle" width="8" nowrap=""><span class="leaderfont38617"><img src="images/bott.jpg" align="absmiddle" border="0"></span></td>
+                              <td valign="middle" align="left"><a href="info/1003/3339.htm" class="c38617" title="我校被评为2016年度天津市平安高校安全管理标准化建设优秀单位" target="_blank"> 我校被评为2016年度天津市平安高校安全管理标准化建设优秀单位 </a></td>
+                              <td valign="middle" align="right" class="timestyle38617" width="-2" nowrap=""></td>
+                            </tr>
+                            <tr>
+                              <td colspan="4" height="2" style="background-image:url(images/22.gif)"></td>
+                            </tr>
+                            <tr>
+                              <td align="center" valign="middle" width="8" nowrap=""><span class="leaderfont38617"><img src="images/bott.jpg" align="absmiddle" border="0"></span></td>
+                              <td valign="middle" align="left"><a href="info/1003/3338.htm" class="c38617" title="迎接全运会 健康新城建——我校第二届体育节开幕" target="_blank"> 迎接全运会 健康新城建——我校第二届体育节开幕 </a></td>
+                              <td valign="middle" align="right" class="timestyle38617" width="-2" nowrap=""></td>
+                            </tr>
+                            <tr>
+                              <td colspan="4" height="2" style="background-image:url(images/22.gif)"></td>
+                            </tr>
+                            <tr>
+                              <td align="center" valign="middle" width="8" nowrap=""><span class="leaderfont38617"><img src="images/bott.jpg" align="absmiddle" border="0"></span></td>
+                              <td valign="middle" align="left"><a href="info/1003/3336.htm" class="c38617" title="新西兰梅西大学代表团一行来我校访问" target="_blank"> 新西兰梅西大学代表团一行来我校访问 </a></td>
+                              <td valign="middle" align="right" class="timestyle38617" width="-2" nowrap=""></td>
+                            </tr>
+                            <tr>
+                              <td colspan="4" height="2" style="background-image:url(images/22.gif)"></td>
+                            </tr>
+                            <tr>
+                              <td align="center" valign="middle" width="8" nowrap=""><span class="leaderfont38617"><img src="images/bott.jpg" align="absmiddle" border="0"></span></td>
+                              <td valign="middle" align="left"><a href="info/1003/3335.htm" class="c38617" title="“喜迎全运盛会 尽展校园风采”——我校第十二届学生社团文化节开幕" target="_blank"> “喜迎全运盛会 尽展校园风采”——我校第十二届学生社团文化节开幕 </a></td>
+                              <td valign="middle" align="right" class="timestyle38617" width="-2" nowrap=""></td>
+                            </tr>
+                            <tr>
+                              <td colspan="4" height="2" style="background-image:url(images/22.gif)"></td>
+                            </tr>
+                            <tr>
+                              <td align="center" valign="middle" width="8" nowrap=""><span class="leaderfont38617"><img src="images/bott.jpg" align="absmiddle" border="0"></span></td>
+                              <td valign="middle" align="left"><a href="info/1003/3329.htm" class="c38617" title="我校召开全国两会精神宣讲报告会" target="_blank"> 我校召开全国两会精神宣讲报告会 </a></td>
+                              <td valign="middle" align="right" class="timestyle38617" width="-2" nowrap=""></td>
+                            </tr>
+                            <tr>
+                              <td colspan="4" height="2" style="background-image:url(images/22.gif)"></td>
+                            </tr>
+                          </tbody>
+                        </table></td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td height="40" colspan="2" background="images/标题-1.gif" bgcolor="#FFFFFF" class="biaotiyou"><table width="730" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td width="177" class="biaotiyou">仪器设备</td>
+                      <td width="197" align="right">more&gt;&gt;</td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td height="222" colspan="2" bgcolor="#FFFFFF">&nbsp;</td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+      <table width="1024" border="0" align="center" cellpadding="1" cellspacing="0">
+        <tr>
+          <td bgcolor="#FFFFFF"><table width="1022" border="0" align="center" cellpadding="6" cellspacing="0">
+              <tr bgcolor="#1486C4">
+                <td width="164" align="right" valign="middle" class="biaoti">友情链接：</td>
+                <td width="146" align="center"><a href="http://www.tjuci.edu.cn/" target="new"><img src="images/天津城建大学.png" alt="" width="138" height="42" /></a></td>
+                <td width="153" align="center"><a href="http://www.tjzhongfa.com/" target="new"><img src="images/中发.png" alt="" width="138" height="42" /></a></td>
+                <td width="146" align="center"><a href="http://www.zhonghuan.com/index.do" target="new"><img src="images/中环.png" alt="" width="140" height="42" /></a></td>
+                <td width="144" align="center"><a href="http://zlfl.byf.com/" target="new"><img src="images/中力防雷.png" alt="" width="126" height="42" /></a></td>
+                <td width="197" align="left"><a href="http://www.tjerc.org.cn/" target="new"><img src="images/中心服务网.png" width="142" height="42" /></a></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+      <table width="1024" border="0" align="center" cellpadding="14" cellspacing="0">
+        <tr>
+          <td align="center">版权所有：天津市建筑智能化系统集成与检测技术工程中心</td>
+        </tr>
+      </table></td>
   </tr>
-</table>
-<table>
-  <table width="1024" border="0" align="center" cellpadding="0" cellspacing="0" >
-    <tr>
-      <td height="40" background="images/导航栏.gif"><table width="1024" height="40" border="1" align="center">
-          <tr align="center" class="daohang" >
-            <td width="130" height="29" valign="middle" class="daohang"><ul class="nav">
-                <li><a href="#">首页</a>
-                  <ul class="subNav">
-                    <li><a href="#">二级菜单</a></li>
-                    <li><a href="#">二级菜单</a></li>
-                    <li><a href="#">二级菜单</a></li>
-                    <li><a href="#">二级菜单</a></li>
-                  </ul>
-                </li>
-              </ul></td>
-            <td width="130" height="29" valign="middle" class="daohang"><ul class="nav">
-                <li><a href="#">中心概括</a>
-                  <ul class="subNav">
-                    <li><a href="#">二级菜单</a></li>
-                    <li><a href="#">二级菜单</a></li>
-                    <li><a href="#">二级菜单</a></li>
-                    <li><a href="#">二级菜单</a></li>
-                  </ul>
-                </li>
-              </ul></td>
-            <td width="130" height="29" valign="middle" class="daohang"><ul class="nav">
-                <li><a href="#">新闻动态</a>
-                  <ul class="subNav">
-                    <li><a href="#">二级菜单</a></li>
-                    <li><a href="#">二级菜单</a></li>
-                    <li><a href="#">二级菜单</a></li>
-                    <li><a href="#">二级菜单</a></li>
-                  </ul>
-                </li>
-              </ul></td>
-            <td width="130" height="29" valign="middle" class="daohang"><ul class="nav">
-                <li><a href="#">科研成果</a>
-                  <ul class="subNav">
-                    <li><a href="#">二级菜单</a></li>
-                    <li><a href="#">二级菜单</a></li>
-                    <li><a href="#">二级菜单</a></li>
-                    <li><a href="#">二级菜单</a></li>
-                  </ul>
-                </li>
-              </ul></td>
-            <td width="130" height="29" valign="middle" class="daohang"><ul class="nav">
-                <li><a href="#">合作单位</a>
-                  <ul class="subNav">
-                    <li><a href="#">二级菜单</a></li>
-                    <li><a href="#">二级菜单</a></li>
-                    <li><a href="#">二级菜单</a></li>
-                    <li><a href="#">二级菜单</a></li>
-                  </ul>
-                </li>
-              </ul></td>
-            <td width="130" height="29" valign="middle" class="daohang"><ul class="nav">
-                <li><a href="#">仪器设备</a>
-                  <ul class="subNav">
-                    <li><a href="#">二级菜单</a></li>
-                    <li><a href="#">二级菜单</a></li>
-                    <li><a href="#">二级菜单</a></li>
-                    <li><a href="#">二级菜单</a></li>
-                  </ul>
-                </li>
-              </ul></td>
-            <td width="130" height="29" valign="middle" class="daohang"><ul class="nav">
-                <li><a href="#">下载专区</a>
-                  <ul class="subNav">
-                    <li><a href="#">二级菜单</a></li>
-                    <li><a href="#">二级菜单</a></li>
-                    <li><a href="#">二级菜单</a></li>
-                    <li><a href="#">二级菜单</a></li>
-                  </ul>
-                </li>
-              </ul></td>
-            <td width="130" height="29" valign="middle" class="daohang"><ul class="nav">
-                <li><a href="#">联系我们</a>
-                  <ul class="subNav">
-                    <li><a href="#">二级菜单</a></li>
-                    <li><a href="#">二级菜单</a></li>
-                    <li><a href="#">二级菜单</a></li>
-                    <li><a href="#">二级菜单</a></li>
-                  </ul>
-                </li>
-              </ul></td>
-          </tr>
-        </table></td>
-    </tr>
-  </table>
-  <table width="1024" height="260" border="0" align="center" cellpadding="0" cellspacing="0">
-    <tr>
-      <td><div class="ad" id="picbox">
-          <div class="pic">
-            <ul>
-              <li><img src="images/a002-梅江二期.gif"/></li>
-              <li><img src="images/未标题-1.gif"/></li>
-              <li><img src="images/城建.gif"/></li>
-              <!--img src="images/a002-梅江二期.gif" width="1024" height="260" /-->
-            </ul>
-          </div>
-        </div></td>
-    </tr>
-  </table>
-  <table width="1024" border="0" align="center" cellpadding="0" cellspacing="0">
-    <tr>
-      <td width="254" height="775"><table width="254" border="0" cellpadding="0" cellspacing="0">
-          <tr>
-            <td width="254" height="40" align="center" valign="middle" background="images/标题.gif" bgcolor="#FFFFFF" class="biaoti"> 研究领域</td>
-          </tr>
-          <tr>
-            <td height="195" valign="middle" bgcolor="#FFFFFF">&nbsp;</td>
-          </tr>
-          <tr>
-            <td height="40" align="center" valign="middle" background="images/标题.gif" bgcolor="#FFFFFF" class="biaoti">合作单位</td>
-          </tr>
-          <tr>
-            <td height="234" valign="middle" bgcolor="#FFFFFF">&nbsp;</td>
-          </tr>
-          <tr>
-            <td height="41" align="center" valign="middle" background="images/标题.gif" bgcolor="#FFFFFF" class="biaoti">联系我们</td>
-          </tr>
-          <tr>
-            <td height="222" valign="middle" bgcolor="#FFFFFF">&nbsp;</td>
-          </tr>
-        </table></td>
-      <td width="768" align="left"><table width="768" border="0" align="right" cellpadding="0" cellspacing="0">
-          <tr>
-            <td height="40" colspan="2" background="images/标题-1.gif" bgcolor="#FFFFFF" class="biaotiyou"><table width="730" border="0" align="center" cellpadding="0" cellspacing="0">
-                <tr>
-                  <td width="177" class="biaotiyou">中心简介</td>
-                  <td width="197" align="right">&nbsp;</td>
-                </tr>
-              </table></td>
-          </tr>
-          <tr>
-            <td width="279" height="195" align="center" valign="middle" bgcolor="#FFFFFF"><img src="images/工程中心.gif" width="237" height="157" /></td>
-            <td width="490" align="left" valign="middle" bgcolor="#FFFFFF" 20><br />
-              <table width="464" border="0">
-                <tr>
-                  <td><p>天津市建筑智能化系统集成与检测技术工程中心于2015年组建, 坐落于天津市西青区, 现<br />
-                      <br />
-                      有科技活动人员总数 72 人, 仪器设备118台(套), 程中心托单位为天津城建大学, 可为中小<br />
-                      <br />
-                      企业提供专业服务内容有, 制定建筑智能化系统集成技术规范与导则, 为系统集成工程提<br />
-                      <br />
-                      供技术咨询和技术服务, 国外先进技术消化吸收与再创新,人才的培养, 开发新技术和新产<br />
-                      <br />
-                      品并进一步推广应用等技术咨询与服务。 </p></td>
-                </tr>
-              </table>
-              <p class="duanluo">&nbsp;</p></td>
-          </tr>
-          <tr>
-            <td height="275" colspan="2" bgcolor="#1486C4"><table width="383" border="0" align="left" cellpadding="0" cellspacing="0">
-                <tr>
-                  <td width="384" height="40" background="images/标题-2.gif" bgcolor="#FFFFFF" class="biaotiyou"><table width="350" border="0" align="center" cellpadding="0" cellspacing="0">
-                      <tr>
-                        <td class="biaotiyou">新闻动态</td>
-                        <td align="right">more&gt;&gt;</td>
-                      </tr>
-                    </table></td>
-                </tr>
-                <tr>
-                  <td height="234" bgcolor="#FFFFFF">&nbsp;</td>
-                </tr>
-              </table>
-              <table width="383" border="0" align="right" cellpadding="0" cellspacing="0">
-                <tr>
-                  <td height="40" background="images/标题-2.gif" bgcolor="#FFFFFF" class="biaotiyou"><table width="350" border="0" align="center" cellpadding="0" cellspacing="0">
-                      <tr>
-                        <td class="biaotiyou">科研成果</td>
-                        <td align="right">more&gt;&gt;</td>
-                      </tr>
-                    </table></td>
-                </tr>
-                <tr>
-                  <td height="234" bgcolor="#FFFFFF">&nbsp;</td>
-                </tr>
-              </table></td>
-          </tr>
-          <tr>
-            <td height="40" colspan="2" background="images/标题-1.gif" bgcolor="#FFFFFF" class="biaotiyou"><table width="730" border="0" align="center" cellpadding="0" cellspacing="0">
-                <tr>
-                  <td width="177" class="biaotiyou">仪器设备</td>
-                  <td width="197" align="right">more&gt;&gt;</td>
-                </tr>
-              </table></td>
-          </tr>
-          <tr>
-            <td height="222" colspan="2" bgcolor="#FFFFFF">&nbsp;</td>
-          </tr>
-        </table></td>
-    </tr>
-  </table>
-  <table width="1024" border="0" align="center" cellpadding="1" cellspacing="0">
-    <tr>
-      <td bgcolor="#FFFFFF"><table width="1022" border="0" align="center" cellpadding="6" cellspacing="0">
-          <tr bgcolor="#1486C4">
-            <td width="164" align="right" valign="middle" class="biaoti">友情链接：</td>
-            <td width="146" align="center"><a href="http://www.tjuci.edu.cn/" target="new"><img src="images/天津城建大学.png" alt="" width="138" height="42" /></a></td>
-            <td width="153" align="center"><a href="http://www.tjzhongfa.com/" target="new"><img src="images/中发.png" alt="" width="138" height="42" /></a></td>
-            <td width="146" align="center"><a href="http://www.zhonghuan.com/index.do" target="new"><img src="images/中环.png" alt="" width="140" height="42" /></a></td>
-            <td width="144" align="center"><a href="http://zlfl.byf.com/" target="new"><img src="images/中力防雷.png" alt="" width="126" height="42" /></a></td>
-            <td width="197" align="left"><a href="http://www.tjerc.org.cn/" target="new"><img src="images/中心服务网.png" width="142" height="42" /></a></td>
-          </tr>
-        </table></td>
-    </tr>
-  </table>
-  <table width="1024" border="0" align="center" cellpadding="14" cellspacing="0">
-    <tr>
-      <td align="center">版权所有：天津市建筑智能化系统集成与检测技术工程中心</td>
-    </tr>
-  </table>
-    </td>
-  
-    </tr>
-  
 </table>
 <p class="daohang">&nbsp;</p>
 </body>
