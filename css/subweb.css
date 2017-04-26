@@ -1,0 +1,110 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #FFF;
+}
+body, td, th {
+	font-size: 12px;
+	color: #000;
+}
+.daohang {
+	display: block;
+	font-size: 16px;
+	font-style: normal;
+	color: #FFF;
+	text-align: center;
+	font-weight: bold;
+	text-decoration: none;
+}
+.daohang:hover {
+	color: #03F;
+}
+.biaoti {
+	font-size: 15px;
+	color: #006;
+	font-weight: bold;
+}
+.biaotiyou {
+	font-size: 15px;
+	color: #006;
+	font-weight: bold;
+}
+.lingyu {
+}
+.lingyu li {
+	list-style-type: none;
+	height: 33px;
+	vertical-align: middle;
+	background: url(/images/list_bg.jpg);
+}
+.lingyu li a {
+	display: block;
+	line-height: 30px;
+	text-decoration: none;
+	color: #000;
+	text-align: center;
+}
+.lingyu li a:hover {
+	color: #03F;
+}
+.hzdw {
+}
+.hzdw li {
+	list-style-type: none;
+	height: 33px;
+	vertical-align: middle;
+	background: url(/images/list_bg1.jpg);
+}
+.hzdw li a {
+	display: block;
+	line-height: 30px;
+	text-decoration: none;
+	color: #000;
+	text-align: center;
+}
+.lxwm {
+}
+.lxwm li {
+	list-style-type: none;
+	height: 33px;
+	vertical-align: middle;
+	background: url(/images/list_bg1.jpg);
+}
+.lxwm li a {
+	display: block;
+	line-height: 30px;
+	text-decoration: none;
+	color: #000;
+	text-align: center;
+}
+#content img {
+	float: left
+}
+#title {
+	font-size: 19px; /* 字号大小 */
+	font-weight: bold; /* 粗体 */
+	text-align: center; /* 居中 */
+}
+#content {
+	font-size: 16px; /* 字号大小*/
+}
+p {
+	line-height: 20px;
+}
+.addpwd td a {
+	display: block;
+	text-decoration: none;
+	color: #000;
+}
+.addpwd td a:hover {
+	color: #03F;
+}
